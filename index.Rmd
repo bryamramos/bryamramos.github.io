@@ -1,5 +1,6 @@
 ---
-title: <center> "Muestreo e inferencia estadística"</center> 
+title: <center> MUESTREO E INFERENCIA ESTADÍSTICA</center>
+
 ---
 
 <center> <h1 style = 'color : Red;'>POBLACIÓN Y MUESTRA</h1> </center>
@@ -255,4 +256,4 @@ El **error máximo admisible** en la estimación de la diferencia de medias util
 <center> <b style = 'color : black; font-size: 30px;'> $E=z_{\alpha/2}\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}}$</b> </center> <br>
 
 
-<center> <h1 style = 'color : Red;'>FÓRMULAS DE MUESTREO.</h1> </center>
+
