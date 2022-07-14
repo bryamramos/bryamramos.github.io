@@ -1,0 +1,258 @@
+---
+title: <center> "Muestreo e inferencia estadística"</center> 
+---
+
+<center> <h1 style = 'color : Red;'>POBLACIÓN Y MUESTRA</h1> </center>
+
+### <b style = 'color: Blue;' > Población.</b>
+Es el conjunto de todos los elementos que tienen una característica determinada.
+
+###  <b style = 'color: Blue;' > Muestra.</b>
+Es la parte de la población que se observa para extraer información acerca de la población y realizar el estudio.
+El proceso mediante el cual se selecciona la muestra a partir de la población se denomina <b>muestreo.</b> 
+
+* Para poder determinar la población en un estudio, las características de la misma han de estar
+definidas perfectamente.
+* La población puede ser finita o infinita. Una población muy grande puede considerarse infinita.
+* Para poder obtener conclusiones válidas es imprescindible que la muestra sea representativa de
+la población.
+
+### <b style = 'color: Blue;' > Representatividad de la muestra.</b>
+Las características de una muestra representativa son las siguientes:
+
+* <b> Tamaño suficientemente grande:</b>  Cuando trabajamos con muestras estamos, normalmente, trabajando con una cantidad de datos inferior a la población.
+* <b> Aleatoriedad:</b> La selección de los datos de una muestra estadística debe ser aleatoria.
+
+Si cumple ambas caracteristicas, la muestra será representativa, en caso contrario será sesgada
+
+### <b style = 'color: Blue;' > Tipos de Muestreo.</b> 
+* <b> Muestreo con reposición:</b>  cada elemento puede ser seleccionado más de una vez.
+* <b>Muestreo sin reposición:</b> una vez seleccionado un elemento, no puede volver a ser seleccionado.
+* <b> Muestreo no aleatorio:</b> o no probabilístico,es aquél en el que todos los elementos de la población no tienen la misma probabilidad de ser elegidos.
+* <b>Muestreo aleatorio:</b> si cada individuo tiene las mismas posibilidades de ser elegido.
+
+
+<center> <h1 style = 'color : Red;'>MUESTREO ALEATORIO</h1> </center>
+
+En el muestreo aleatorio todos los elementos tienen la misma probabilidad de ser elegidos.
+Los individuos que formarán parte de la muestra se elegirán al azar mediante números
+aleatorios. Existen varios métodos para obtener números aleatorios, los más frecuentes son
+la utilización de tablas de números aleatorios o generarlos por ordenador.
+
+El muestreo aleatorio puede realizarse de distintas maneras, las más frecuentes son el
+muestreo simple, el sistemático, el estratificado y el muestreo por conglomerados.
+
+### <b style = 'color: Blue;' >Muestreo aleatorio simple.</b>
+Es el método conceptualmente más simple. Consiste en extraer todos los individuos al azar de una lista (marco de la encuesta). En la práctica, a menos que se trate de poblaciones
+pequeñas o de estructura muy simple, es difícil de llevar a cabo de forma eficaz.
+
+### <b style = 'color: Blue;' >Muestreo sistemático.</b>
+En este caso se elige el primer individuo al azar y el resto viene condicionado por aquél.
+Este método es muy simple de aplicar en la práctica y tiene la ventaja de que no hace
+falta disponer de un marco de encuesta elaborado. Puede aplicarse en la mayoría de
+las situaciones, la única precaución que debe tenerse en cuenta es comprobar que la
+característica que estudiamos no tenga una periodicidad que coincida con la del
+muestreo (por ejemplo elegir un día de la semana para tomar muestras en un matadero,
+ya que muchos ganaderos suelen sacrificar un día determinado).
+
+$$K=\frac{N^{\circ} \ de \ elementos \ de \ la \ Población}{tamaño \ de \ la \ muestra}= \frac{N}{n}$$
+ 
+### <b style = 'color: Blue;' >Muestreo aleatorio estratificado.</b>
+Se divide la población en grupos en función de un carácter determinado y después se muestrea cada grupo aleatoriamente, para obtener la parte proporcional de la muestra. Este método se aplica para evitar que por azar algún grupo de animales este menos representado que los otros
+
+### <b style = 'color: Blue;' >Muestreo aleatorio por conglomerados.</b>
+Se divide la población en varios grupos de características parecidas entre ellos y luego se analizan completamente algunos de los grupos, descartando los demás.
+Dentro de cada conglomerado existe una variación importante, pero los distintos conglomerados son parecidos. Requiere una muestra más grande, pero suele simplificar la recogida de muestras.
+Frecuentemente los conglomerados se aplican a zonas geográficas.
+
+
+<center> <h1 style = 'color : Red;'>DISTRIBUCIÓN EN EL MUESTREO DE MEDIAS: DISTRIBUCIÓN DE LA MEDIA.</h1> </center>
+
+### <b style= 'color: Blue;'>Teorema central del límite.</b>
+Dada una población de media $\mu$ y desviación típica $\sigma$ , no necesariamente normal. <b>La distribución del las medias</b> de las muestras de tamaño n:
+
+* Tiene la misma media $\mu$ que la población.
+
+* Su desviación típica es $\frac{\sigma}{\sqrt{n}}$  y , por tanto, disminuye al aumentar n.
+
+* A partir de $n\geq 30$ es prácticamente normal.
+
+
+<center> <b style = 'color : black; font-size: 30px;'>$\overline{X}\equiv \begin{bmatrix} \mu , & \frac{\sigma}{\sqrt{n}}  \end{bmatrix}$ </b> </center>
+ 
+
+* Las distribuciones de las medias muestrales será una <b>normal si la distribución de partida es
+normal</b>, independientemente del tamaño de la muestra.
+* Si la distribución de partida <b>no es normal</b>, el tamaño de la muestra debe ser <b>superior o igual a 30</b>.
+
+si se toman sucesivas muestras (k) de tamaño n de una población que puede o no ser normal, la distribución de probabilidad de esas muestras, conforme n se vuelve grande, se aproxima a una distribucion normal con: 
+
+<center> <b style = 'color : black; font-size: 30px;'>$\mu_{\overline{x}}= \overline{x}=\mu$ </b> </center> <br>
+
+
+<center>  <b style = 'color : black; font-size: 30px;'>$\sigma_{\overline{x}}=\frac{\sigma }{\sqrt{n}}$ </b> </center> <br>
+
+
+<center>  <b style = 'color : black; font-size: 30px;'>
+$Z=\frac{\bar{x}-\mu}{\sigma_{\overline{x}}}$</b> </center> <br>
+
+<center> <h1 style = 'color : Red;'>DISTRIBUCIÓN EN EL MUESTREO DE UNA PROPORCIÓN.</h1> </center>
+
+Si se toman muestras de tamaño  de una población don una distribución binomial de parámetros  p  y  q  =  ( 1- p ) ,  la distribución muestral de proporciones se aproxima a una distribución normal:
+
+
+* Media:  <b style = 'color : black; font-size: 20px;'>$\mu=p$ </b>
+* Desviación típica: <b style = 'color : black; font-size: 20px;'>$\sigma= \sqrt{\frac{p.q}{n}}$ </b>
+
+A medida que  n  crece la distribución de $\widehat{p}$ se aproxima cada vez más a una distribución normal donde: <br>
+
+<center> <b style = 'color : black; font-size: 25px;'>$\widehat{p}\equiv N\begin{pmatrix}
+p &, \sqrt{\frac{p.q}{n}} 
+\end{pmatrix}$ </b> </center> <br>
+
+
+La fórmula que se utilizará para el cálculo de probabilidad en una distribución muestral de proporciones está basada en la aproximación de la distribución binomial a la normal . Esta fórmula nos servirá para calcular la probabilidad del comportamiento de la proporción en la muestra. <br>
+
+<center> <b style = 'color : black; font-size: 30px;'>$Z=\frac{p-P}{\sqrt{\frac{P(1-P)}{n}}}$ </b> </center> <br>
+
+ A la fórmula anterior se le puede agregar el factor de corrección (en el denominador):
+ <center> <b style = 'color : black; font-size: 30px;'>$Z=\frac{p-P}{\sqrt{\frac{P(1-P)}{n}\sqrt{\frac{N-n}{N-1}}}}$ </b> </center> <br>
+ 
+si se cumplen con las condiciones mencionadas anteriormente de que sea una población finita y sin reemplazo.<br>
+
+<center> <h1 style = 'color : Red;'>DISTRIBUCIÓN MUESTRAL DE DIFERENCIA DE MEDIAS</h1> </center>
+Dos poblaciones que sigan distribuciones normales  N(μ1, σ1) y  N(μ2, σ2), o bien, si ambas poblaciones tienen distribuciones cualesquiera con media μ1 y μ2, desviaciones típicas σ1 y σ2, y las respectivas muestras son de tamaño n1 y n2, suficientemente grandes, entonces la distribución muestral de diferencia de medias sigue una distribución normal:
+
+* Media: $\mu_{1}-\mu_{2}$
+
+* Desviación tipica: <center> <b style = 'color : black; font-size: 30px;'>$\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}}$ </b> </center>
+\\ 
+
+
+<center> <b style = 'color : black; font-size: 30px;'>$\bar{x_{1}}-\bar{x_{2}}\equiv N(\mu_{1}-\mu_{2};\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}})$</b> </center>
+\\
+
+Y la variable tipificada viene dada por la expresión:
+\\
+<center> <b style = 'color : black; font-size: 30px;'>$Z=\frac{(\bar{x_{1}}-\bar{x_{2})}-{(\mu_{1}}-{\mu_{2})}}{\sigma_{\bar{x_{1}}-\bar{x_{2}}}}$</b> </center> <br>
+
+\\
+
+<center> <h1 style = 'color : Red;'>ESTIMACIÓN PUNTUAL</h1> </center>
+La <b>estimación puntual</b> es un procedimiento mediante el cual se obtiene un único valor para el parámetro desconocido.
+
+La <b>estimación por intervalos de confianza</b> es un procedimiento por el que obtenemos un intervalo que contiene al parámetro desconocido con un cierto nivel de confianza fijado de antemano.
+
+### <b style= 'color: Blue;'>Media muestral.</b>
+Dada una muestra { x1, x2, ... , xn } de una población que sigue una distribución normal de media μ desconocida, un estimador puntual para la media poblacional μ es la media muestral.
+
+<center> <b style = 'color : black; font-size: 30px;'>$\bar{X}=\frac{\sum_{i=1}^{n}x_{i}}{n}$ </b> </center>\\
+
+
+### <b style= 'color: Blue;'>Proporción muestral.</b>
+Dada una muestra { x1, x2, ... , xn } de una población que sigue una distribución binomial cuyo parámetro p es desconocido, un estimador puntual para el parámetro p es la proporción muestral :
+
+<center> <b style = 'color : black; font-size: 30px;'>$\hat{p}=\frac{\sum_{i=1}^{n}x_{i}}{n}$ </b> </center>
+\\
+
+<center> <h1 style = 'color : Red;'>ESTIMACIÓN POR INTERVALOS DE CONFIANZA</h1> </center>
+* **Intervalo de confianza** es el intervalo que contiene al parámetro que se está estimando con un cierto nivel de confianza.
+* **Nivel de confianza (1 - α)** , significa que el (1 - α) · 100% de los intervalos de confianza contienen el parámetro poblacional que se está estimando.
+
+A cada nivel de confianza (Nc) le corresponde un valor **crítico zα/2** correspondiente a la distribución normal N(0, 1) y que cumple: <br>
+
+<center> <b style = 'color : black; font-size: 30px;'>$P(-z_{\alpha/2}\leq Z \leq z_{\alpha/2})=1-\alpha$ </b> </center> <br>
+
+A los extremos del intervalo de confianza se les llama límites de confianza.
+
+
+### <b style= 'color: Blue;'>Determinación del valor crítico. $Z_{\frac{\alpha}{2}}$</b>
+El **valor crítico $Z_{\frac{\alpha}{2}}$** correspondiente a un nivel de confianza $N_{c}$ en tanto por ciento, se calcula mediante la expresión: <br>
+
+
+<center> <b style = 'color : black; font-size: 30px;'>$P( Z \leq z_{\alpha/2})=\frac{1+\frac{N_{c}}{100}}{2}$ </b> </center> <br>
+Y después buscando el resultado dentro de las tablas de la distribución normal.<br>
+
+### <b style= 'color: Blue;'>Intervalos característicos en distribuciones normales cualesquiera</b>
+
+En una distribución N(μ , σ) el intervalo correspondiente a una probabilidad p = 1 -α es:
+
+<center> <b style = 'color : black; font-size: 30px;'>$(\mu-z_{\alpha/2}.\sigma , \mu +z_{\alpha/2}.\sigma)$</b> </center> <br>
+
+
+
+<div>
+<p style = 'text-align:center;'>
+<iframe width="360" height = "280"
+src="https://calculo.cc/temas/temas_estadistica/muestreo/imagenes/teoria/inter_confi/inter_confi.gif">
+</iframe>
+</div>
+</p> <br>
+
+
+<center> <h1 style = 'color : Red;'>INTERVALOS DE CONFIANZA PARA LA MEDIA POBLACIONAL</h1>
+</center>
+Un **intervalo de confianza para la media** poblacional de una distribución normal con desviación típica σ conocida, con un nivel de confianza 1 - α construido a partir de una muestra de tamaño n, es:
+
+<center> <b style = 'color : black; font-size: 30px;'>$(\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}} ;\bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})$</b> </center> <br>
+
+Si σ es desconocida y n es grande n ≥ 0, el intervalo de confianza viene dado por:
+<center> <b style = 'color : black; font-size: 30px;'>$(\bar{x}-z_{\alpha/2}\frac{\hat{\sigma}}{\sqrt{n}} ;\bar{x}+z_{\alpha/2}\frac{\hat{\sigma}}{\sqrt{n}})$</b> </center> <br>
+
+Donde  $\hat{\sigma}^{2}$es la cuasivarianza muestral:
+
+<center> <b style = 'color : black; font-size: 30px;'>$\hat{\sigma}^{2}={\sigma}^{2}.\frac{n}{n-1}$</b> </center> <br>
+
+### <b style= 'color: Blue;'>Error máximo admisible</b>
+El **error máximo admisible** en la estimación de la media poblacional utilizando el intervalo de confianza para la media con un nivel de confianza 1 - α es :
+
+<center> <b style = 'color : black; font-size: 30px;'>$E=Z_{\alpha/2}.\frac{\sigma}{\sqrt{n}}$</b> </center> <br>
+
+El error será igual o menor que la mitad de la amplitud del intervalo, es decir, el radio del intervalo. <br>
+<div>
+<p style = 'text-align:center;'>
+<img src="https://calculo.cc/temas/temas_estadistica/muestreo/imagenes/teoria/inter_confi/error.gif" alt="JuveYell" width="300px">
+</p>
+</div> <br>
+
+### <b style= 'color: Blue;'>Tamaño de la muestra</b>
+Despejando n de la fórmula anterior, podemos calcular el **tamaño mínimo** para que se cumplan las condiciones. <br>
+
+<center> <b style = 'color : black; font-size: 30px;'>$E=Z_{\alpha/2}.\frac{\sigma}{\sqrt{n}}\Rightarrow \sqrt{n}=Z_{\alpha/2}.\frac{\sigma}{{E}}\Rightarrow n= (Z_{\alpha/2}.\frac{\sigma}{E})^{2}$</b> </center> <br>
+
+<center> <h1 style = 'color : Red;'>INTERVALO DE CONFIANZA PARA LA PROPORCIÓN.</h1> </center>
+Un intervalo de confianza para la proporción de individuos que cumplen una característica en una población, con un nivel de confianza 1 - α construido a partir de una muestra de tamaño n, es: <br>
+
+<center> <b style = 'color : black; font-size: 30px;'>$(\hat{p}-z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}} , \hat{p}+z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}})$</b> </center> <br>
+
+donde:
+* $\widehat{p}$ es la proporción de la muestra
+* $Z_{α/2}$ es el nivel crítico para el nivel de confianza α
+* n es muy grande, lo que equivale a   np > 5   y   n(1-p) > 5
+
+
+
+### <b style= 'color: Blue;'>Error máximo admisible</b>
+El **error máximo admisible** en la estimación de la proporción utilizando el intervalo de confianza para la proporción con un nivel de confianza 1 - α es su radio: <br>
+<center> <b style = 'color : black; font-size: 30px;'>$E= z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}$</b> </center> <br>
+
+* Cuanto mayor sea n, menor será el error cometido.
+* Cuanto mayor sea 1-α , mayor será $Z_{α/2}$ y , por tanto, también el error.
+
+### <b style= 'color: Blue;'>Tamaño de la muestra</b>
+Despejando n de la fórmula anterior, podemos calcular el **tamaño mínimo** para que se cumplan las condiciones. <br>
+
+<center> <b style = 'color : black; font-size: 30px;'>$E= z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\Rightarrow \sqrt{n}= z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{E}}\Rightarrow n = z_{\alpha/2}^{2}{\frac{\hat{p}(1-\hat{p})}{E^{2}}}$</b> </center> <br>
+
+<center> <h1 style = 'color : Red;'>INTERVALOS DE CONFIANZA PARA LA DIFERENCIA DE MEDIAS.</h1> </center>
+Un **intervalo de confianza para la diferencia de medias** poblacionales de dos distribuciones normales con desviaciones típicas $\sigma_{1}$ y $\sigma_{2}$ conocidas, con un nivel de confianza 1-α construido a partir de dos muestras de tamaño n1 y n2 es: <br>
+
+<center> <b style = 'color : black; font-size: 30px;'> $[(\bar{x_{1}}-\bar{x_{2}})-z_{\alpha/2}\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}},(\bar{x_{1}}-\bar{x_{2}})+z_{\alpha/2}\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}}]$</b> </center> <br>
+
+### <b style= 'color: Blue;'>Error máximo admisible</b>
+El **error máximo admisible** en la estimación de la diferencia de medias utilizando el intervalo de confianza para la diferencia de medias con un nivel de confianza 1 - α es su radio:<br>
+
+<center> <b style = 'color : black; font-size: 30px;'> $E=z_{\alpha/2}\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}}$</b> </center> <br>
+
+
+<center> <h1 style = 'color : Red;'>FÓRMULAS DE MUESTREO.</h1> </center>

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>index.knit</title>
+
+<script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.tab('show');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">UNSCH</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="about.html">Nosotros</a>
+</li>
+<li>
+  <a href="index.html">Estadística</a>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore"><center>
+“Muestreo e inferencia estadística”
+</center></h1>
+
+</div>
+
+
+<center>
+<h1 style="color : Red;">
+POBLACIÓN Y MUESTRA
+</h1>
+</center>
+<div id="población." class="section level3">
+<h3><b style = 'color: Blue;' > Población.</b></h3>
+<p>Es el conjunto de todos los elementos que tienen una característica
+determinada.</p>
+</div>
+<div id="muestra." class="section level3">
+<h3><b style = 'color: Blue;' > Muestra.</b></h3>
+<p>Es la parte de la población que se observa para extraer información
+acerca de la población y realizar el estudio. El proceso mediante el
+cual se selecciona la muestra a partir de la población se denomina
+<b>muestreo.</b></p>
+<ul>
+<li>Para poder determinar la población en un estudio, las
+características de la misma han de estar definidas perfectamente.</li>
+<li>La población puede ser finita o infinita. Una población muy grande
+puede considerarse infinita.</li>
+<li>Para poder obtener conclusiones válidas es imprescindible que la
+muestra sea representativa de la población.</li>
+</ul>
+</div>
+<div id="representatividad-de-la-muestra." class="section level3">
+<h3><b style = 'color: Blue;' > Representatividad de la
+muestra.</b></h3>
+<p>Las características de una muestra representativa son las
+siguientes:</p>
+<ul>
+<li><b> Tamaño suficientemente grande:</b> Cuando trabajamos con
+muestras estamos, normalmente, trabajando con una cantidad de datos
+inferior a la población.</li>
+<li><b> Aleatoriedad:</b> La selección de los datos de una muestra
+estadística debe ser aleatoria.</li>
+</ul>
+<p>Si cumple ambas caracteristicas, la muestra será representativa, en
+caso contrario será sesgada</p>
+</div>
+<div id="tipos-de-muestreo." class="section level3">
+<h3><b style = 'color: Blue;' > Tipos de Muestreo.</b></h3>
+<ul>
+<li><b> Muestreo con reposición:</b> cada elemento puede ser
+seleccionado más de una vez.</li>
+<li><b>Muestreo sin reposición:</b> una vez seleccionado un elemento, no
+puede volver a ser seleccionado.</li>
+<li><b> Muestreo no aleatorio:</b> o no probabilístico,es aquél en el
+que todos los elementos de la población no tienen la misma probabilidad
+de ser elegidos.</li>
+<li><b>Muestreo aleatorio:</b> si cada individuo tiene las mismas
+posibilidades de ser elegido.</li>
+</ul>
+<center>
+<h1 style="color : Red;">
+MUESTREO ALEATORIO
+</h1>
+</center>
+<p>En el muestreo aleatorio todos los elementos tienen la misma
+probabilidad de ser elegidos. Los individuos que formarán parte de la
+muestra se elegirán al azar mediante números aleatorios. Existen varios
+métodos para obtener números aleatorios, los más frecuentes son la
+utilización de tablas de números aleatorios o generarlos por
+ordenador.</p>
+<p>El muestreo aleatorio puede realizarse de distintas maneras, las más
+frecuentes son el muestreo simple, el sistemático, el estratificado y el
+muestreo por conglomerados.</p>
+</div>
+<div id="muestreo-aleatorio-simple." class="section level3">
+<h3><b style = 'color: Blue;' >Muestreo aleatorio simple.</b></h3>
+<p>Es el método conceptualmente más simple. Consiste en extraer todos
+los individuos al azar de una lista (marco de la encuesta). En la
+práctica, a menos que se trate de poblaciones pequeñas o de estructura
+muy simple, es difícil de llevar a cabo de forma eficaz.</p>
+</div>
+<div id="muestreo-sistemático." class="section level3">
+<h3><b style = 'color: Blue;' >Muestreo sistemático.</b></h3>
+<p>En este caso se elige el primer individuo al azar y el resto viene
+condicionado por aquél. Este método es muy simple de aplicar en la
+práctica y tiene la ventaja de que no hace falta disponer de un marco de
+encuesta elaborado. Puede aplicarse en la mayoría de las situaciones, la
+única precaución que debe tenerse en cuenta es comprobar que la
+característica que estudiamos no tenga una periodicidad que coincida con
+la del muestreo (por ejemplo elegir un día de la semana para tomar
+muestras en un matadero, ya que muchos ganaderos suelen sacrificar un
+día determinado).</p>
+<p><span class="math display">\[K=\frac{N^{\circ} \ de \ elementos \ de
+\ la \ Población}{tamaño \ de \ la \ muestra}= \frac{N}{n}\]</span></p>
+</div>
+<div id="muestreo-aleatorio-estratificado." class="section level3">
+<h3><b style = 'color: Blue;' >Muestreo aleatorio
+estratificado.</b></h3>
+<p>Se divide la población en grupos en función de un carácter
+determinado y después se muestrea cada grupo aleatoriamente, para
+obtener la parte proporcional de la muestra. Este método se aplica para
+evitar que por azar algún grupo de animales este menos representado que
+los otros</p>
+</div>
+<div id="muestreo-aleatorio-por-conglomerados." class="section level3">
+<h3><b style = 'color: Blue;' >Muestreo aleatorio por
+conglomerados.</b></h3>
+<p>Se divide la población en varios grupos de características parecidas
+entre ellos y luego se analizan completamente algunos de los grupos,
+descartando los demás. Dentro de cada conglomerado existe una variación
+importante, pero los distintos conglomerados son parecidos. Requiere una
+muestra más grande, pero suele simplificar la recogida de muestras.
+Frecuentemente los conglomerados se aplican a zonas geográficas.</p>
+<center>
+<h1 style="color : Red;">
+DISTRIBUCIÓN EN EL MUESTREO DE MEDIAS: DISTRIBUCIÓN DE LA MEDIA.
+</h1>
+</center>
+</div>
+<div id="teorema-central-del-límite." class="section level3">
+<h3><b style= 'color: Blue;'>Teorema central del límite.</b></h3>
+<p>Dada una población de media <span class="math inline">\(\mu\)</span>
+y desviación típica <span class="math inline">\(\sigma\)</span> , no
+necesariamente normal. <b>La distribución del las medias</b> de las
+muestras de tamaño n:</p>
+<ul>
+<li><p>Tiene la misma media <span class="math inline">\(\mu\)</span> que
+la población.</p></li>
+<li><p>Su desviación típica es <span
+class="math inline">\(\frac{\sigma}{\sqrt{n}}\)</span> y , por tanto,
+disminuye al aumentar n.</p></li>
+<li><p>A partir de <span class="math inline">\(n\geq 30\)</span> es
+prácticamente normal.</p></li>
+</ul>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(\overline{X}\equiv \begin{bmatrix} \mu , &amp;
+\frac{\sigma}{\sqrt{n}} \end{bmatrix}\)</span> </b>
+</center>
+<ul>
+<li>Las distribuciones de las medias muestrales será una <b>normal si la
+distribución de partida es normal</b>, independientemente del tamaño de
+la muestra.</li>
+<li>Si la distribución de partida <b>no es normal</b>, el tamaño de la
+muestra debe ser <b>superior o igual a 30</b>.</li>
+</ul>
+<p>si se toman sucesivas muestras (k) de tamaño n de una población que
+puede o no ser normal, la distribución de probabilidad de esas muestras,
+conforme n se vuelve grande, se aproxima a una distribucion normal
+con:</p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(\mu_{\overline{x}}= \overline{x}=\mu\)</span> </b>
+</center>
+<p><br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(\sigma_{\overline{x}}=\frac{\sigma
+}{\sqrt{n}}\)</span> </b>
+</center>
+<p><br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'> <span
+class="math inline">\(Z=\frac{\bar{x}-\mu}{\sigma_{\overline{x}}}\)</span></b>
+</center>
+<p><br></p>
+<center>
+<h1 style="color : Red;">
+DISTRIBUCIÓN EN EL MUESTREO DE UNA PROPORCIÓN.
+</h1>
+</center>
+<p>Si se toman muestras de tamaño de una población don una distribución
+binomial de parámetros p y q = ( 1- p ) , la distribución muestral de
+proporciones se aproxima a una distribución normal:</p>
+<ul>
+<li>Media: <b style = 'color : black; font-size: 20px;'><span
+class="math inline">\(\mu=p\)</span> </b></li>
+<li>Desviación típica:
+<b style = 'color : black; font-size: 20px;'><span
+class="math inline">\(\sigma= \sqrt{\frac{p.q}{n}}\)</span> </b></li>
+</ul>
+<p>A medida que n crece la distribución de <span
+class="math inline">\(\widehat{p}\)</span> se aproxima cada vez más a
+una distribución normal donde: <br></p>
+<center>
+<b style = 'color : black; font-size: 25px;'><span
+class="math inline">\(\widehat{p}\equiv N\begin{pmatrix} p &amp;,
+\sqrt{\frac{p.q}{n}} \end{pmatrix}\)</span> </b>
+</center>
+<p><br></p>
+<p>La fórmula que se utilizará para el cálculo de probabilidad en una
+distribución muestral de proporciones está basada en la aproximación de
+la distribución binomial a la normal . Esta fórmula nos servirá para
+calcular la probabilidad del comportamiento de la proporción en la
+muestra. <br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(Z=\frac{p-P}{\sqrt{\frac{P(1-P)}{n}}}\)</span>
+</b>
+</center>
+<p><br></p>
+A la fórmula anterior se le puede agregar el factor de corrección (en el
+denominador):
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(Z=\frac{p-P}{\sqrt{\frac{P(1-P)}{n}\sqrt{\frac{N-n}{N-1}}}}\)</span>
+</b>
+</center>
+<p><br></p>
+<p>si se cumplen con las condiciones mencionadas anteriormente de que
+sea una población finita y sin reemplazo.<br></p>
+<center>
+<h1 style="color : Red;">
+DISTRIBUCIÓN MUESTRAL DE DIFERENCIA DE MEDIAS
+</h1>
+</center>
+<p>Dos poblaciones que sigan distribuciones normales N(μ1, σ1) y N(μ2,
+σ2), o bien, si ambas poblaciones tienen distribuciones cualesquiera con
+media μ1 y μ2, desviaciones típicas σ1 y σ2, y las respectivas muestras
+son de tamaño n1 y n2, suficientemente grandes, entonces la distribución
+muestral de diferencia de medias sigue una distribución normal:</p>
+<ul>
+<li><p>Media: <span
+class="math inline">\(\mu_{1}-\mu_{2}\)</span></p></li>
+<li><p>Desviación tipica:</p>
+<center>
+<p><b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}}\)</span>
+</b></p>
+</center>
+<p>\</p></li>
+</ul>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(\bar{x_{1}}-\bar{x_{2}}\equiv
+N(\mu_{1}-\mu_{2};\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}})\)</span></b>
+</center>
+<p>\</p>
+Y la variable tipificada viene dada por la expresión: \
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(Z=\frac{(\bar{x_{1}}-\bar{x_{2})}-{(\mu_{1}}-{\mu_{2})}}{\sigma_{\bar{x_{1}}-\bar{x_{2}}}}\)</span></b>
+</center>
+<p><br></p>
+<p>\</p>
+<center>
+<h1 style="color : Red;">
+ESTIMACIÓN PUNTUAL
+</h1>
+</center>
+<p>La <b>estimación puntual</b> es un procedimiento mediante el cual se
+obtiene un único valor para el parámetro desconocido.</p>
+<p>La <b>estimación por intervalos de confianza</b> es un procedimiento
+por el que obtenemos un intervalo que contiene al parámetro desconocido
+con un cierto nivel de confianza fijado de antemano.</p>
+</div>
+<div id="media-muestral." class="section level3">
+<h3><b style= 'color: Blue;'>Media muestral.</b></h3>
+<p>Dada una muestra { x1, x2, … , xn } de una población que sigue una
+distribución normal de media μ desconocida, un estimador puntual para la
+media poblacional μ es la media muestral.</p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(\bar{X}=\frac{\sum_{i=1}^{n}x_{i}}{n}\)</span>
+</b>
+</center>
+<p>\</p>
+</div>
+<div id="proporción-muestral." class="section level3">
+<h3><b style= 'color: Blue;'>Proporción muestral.</b></h3>
+<p>Dada una muestra { x1, x2, … , xn } de una población que sigue una
+distribución binomial cuyo parámetro p es desconocido, un estimador
+puntual para el parámetro p es la proporción muestral :</p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(\hat{p}=\frac{\sum_{i=1}^{n}x_{i}}{n}\)</span>
+</b>
+</center>
+<p>\</p>
+<center>
+<h1 style="color : Red;">
+ESTIMACIÓN POR INTERVALOS DE CONFIANZA
+</h1>
+</center>
+<ul>
+<li><strong>Intervalo de confianza</strong> es el intervalo que contiene
+al parámetro que se está estimando con un cierto nivel de
+confianza.</li>
+<li><strong>Nivel de confianza (1 - α)</strong> , significa que el (1 -
+α) · 100% de los intervalos de confianza contienen el parámetro
+poblacional que se está estimando.</li>
+</ul>
+<p>A cada nivel de confianza (Nc) le corresponde un valor
+<strong>crítico zα/2</strong> correspondiente a la distribución normal
+N(0, 1) y que cumple: <br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(P(-z_{\alpha/2}\leq Z \leq
+z_{\alpha/2})=1-\alpha\)</span> </b>
+</center>
+<p><br></p>
+<p>A los extremos del intervalo de confianza se les llama límites de
+confianza.</p>
+</div>
+<div id="determinación-del-valor-crítico.-z_fracalpha2"
+class="section level3">
+<h3><b style= 'color: Blue;'>Determinación del valor crítico. <span
+class="math inline">\(Z_{\frac{\alpha}{2}}\)</span></b></h3>
+<p>El <strong>valor crítico <span
+class="math inline">\(Z_{\frac{\alpha}{2}}\)</span></strong>
+correspondiente a un nivel de confianza <span
+class="math inline">\(N_{c}\)</span> en tanto por ciento, se calcula
+mediante la expresión: <br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(P( Z \leq
+z_{\alpha/2})=\frac{1+\frac{N_{c}}{100}}{2}\)</span> </b>
+</center>
+<p><br> Y después buscando el resultado dentro de las tablas de la
+distribución normal.<br></p>
+</div>
+<div
+id="intervalos-característicos-en-distribuciones-normales-cualesquiera"
+class="section level3">
+<h3><b style= 'color: Blue;'>Intervalos característicos en
+distribuciones normales cualesquiera</b></h3>
+<p>En una distribución N(μ , σ) el intervalo correspondiente a una
+probabilidad p = 1 -α es:</p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\((\mu-z_{\alpha/2}.\sigma , \mu
++z_{\alpha/2}.\sigma)\)</span></b>
+</center>
+<p><br></p>
+<div>
+<p style="text-align:center;">
+<iframe width="360" height="280" src="https://calculo.cc/temas/temas_estadistica/muestreo/imagenes/teoria/inter_confi/inter_confi.gif">
+</iframe>
+</div>
+</p>
+<p><br></p>
+<center>
+<h1 style="color : Red;">
+INTERVALOS DE CONFIANZA PARA LA MEDIA POBLACIONAL
+</h1>
+</center>
+<p>Un <strong>intervalo de confianza para la media</strong> poblacional
+de una distribución normal con desviación típica σ conocida, con un
+nivel de confianza 1 - α construido a partir de una muestra de tamaño n,
+es:</p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\((\bar{x}-z_{\alpha/2}\frac{\sigma}{\sqrt{n}}
+;\bar{x}+z_{\alpha/2}\frac{\sigma}{\sqrt{n}})\)</span></b>
+</center>
+<p><br></p>
+Si σ es desconocida y n es grande n ≥ 0, el intervalo de confianza viene
+dado por:
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\((\bar{x}-z_{\alpha/2}\frac{\hat{\sigma}}{\sqrt{n}}
+;\bar{x}+z_{\alpha/2}\frac{\hat{\sigma}}{\sqrt{n}})\)</span></b>
+</center>
+<p><br></p>
+<p>Donde <span class="math inline">\(\hat{\sigma}^{2}\)</span>es la
+cuasivarianza muestral:</p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(\hat{\sigma}^{2}={\sigma}^{2}.\frac{n}{n-1}\)</span></b>
+</center>
+<p><br></p>
+</div>
+<div id="error-máximo-admisible" class="section level3">
+<h3><b style= 'color: Blue;'>Error máximo admisible</b></h3>
+<p>El <strong>error máximo admisible</strong> en la estimación de la
+media poblacional utilizando el intervalo de confianza para la media con
+un nivel de confianza 1 - α es :</p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(E=Z_{\alpha/2}.\frac{\sigma}{\sqrt{n}}\)</span></b>
+</center>
+<p><br></p>
+El error será igual o menor que la mitad de la amplitud del intervalo,
+es decir, el radio del intervalo. <br>
+<div>
+<p style="text-align:center;">
+<img src="https://calculo.cc/temas/temas_estadistica/muestreo/imagenes/teoria/inter_confi/error.gif" alt="JuveYell" width="300px">
+</p>
+</div>
+<p><br></p>
+</div>
+<div id="tamaño-de-la-muestra" class="section level3">
+<h3><b style= 'color: Blue;'>Tamaño de la muestra</b></h3>
+<p>Despejando n de la fórmula anterior, podemos calcular el
+<strong>tamaño mínimo</strong> para que se cumplan las condiciones.
+<br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(E=Z_{\alpha/2}.\frac{\sigma}{\sqrt{n}}\Rightarrow
+\sqrt{n}=Z_{\alpha/2}.\frac{\sigma}{{E}}\Rightarrow n=
+(Z_{\alpha/2}.\frac{\sigma}{E})^{2}\)</span></b>
+</center>
+<p><br></p>
+<center>
+<h1 style="color : Red;">
+INTERVALO DE CONFIANZA PARA LA PROPORCIÓN.
+</h1>
+</center>
+<p>Un intervalo de confianza para la proporción de individuos que
+cumplen una característica en una población, con un nivel de confianza 1
+- α construido a partir de una muestra de tamaño n, es: <br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\((\hat{p}-z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}
+, \hat{p}+z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}})\)</span></b>
+</center>
+<p><br></p>
+<p>donde: * <span class="math inline">\(\widehat{p}\)</span> es la
+proporción de la muestra * <span class="math inline">\(Z_{α/2}\)</span>
+es el nivel crítico para el nivel de confianza α * n es muy grande, lo
+que equivale a np &gt; 5 y n(1-p) &gt; 5</p>
+</div>
+<div id="error-máximo-admisible-1" class="section level3">
+<h3><b style= 'color: Blue;'>Error máximo admisible</b></h3>
+El <strong>error máximo admisible</strong> en la estimación de la
+proporción utilizando el intervalo de confianza para la proporción con
+un nivel de confianza 1 - α es su radio: <br>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(E=
+z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\)</span></b>
+</center>
+<p><br></p>
+<ul>
+<li>Cuanto mayor sea n, menor será el error cometido.</li>
+<li>Cuanto mayor sea 1-α , mayor será <span
+class="math inline">\(Z_{α/2}\)</span> y , por tanto, también el
+error.</li>
+</ul>
+</div>
+<div id="tamaño-de-la-muestra-1" class="section level3">
+<h3><b style= 'color: Blue;'>Tamaño de la muestra</b></h3>
+<p>Despejando n de la fórmula anterior, podemos calcular el
+<strong>tamaño mínimo</strong> para que se cumplan las condiciones.
+<br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'><span
+class="math inline">\(E=
+z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\Rightarrow \sqrt{n}=
+z_{\alpha/2}\sqrt{\frac{\hat{p}(1-\hat{p})}{E}}\Rightarrow n =
+z_{\alpha/2}^{2}{\frac{\hat{p}(1-\hat{p})}{E^{2}}}\)</span></b>
+</center>
+<p><br></p>
+<center>
+<h1 style="color : Red;">
+INTERVALOS DE CONFIANZA PARA LA DIFERENCIA DE MEDIAS.
+</h1>
+</center>
+<p>Un <strong>intervalo de confianza para la diferencia de
+medias</strong> poblacionales de dos distribuciones normales con
+desviaciones típicas <span class="math inline">\(\sigma_{1}\)</span> y
+<span class="math inline">\(\sigma_{2}\)</span> conocidas, con un nivel
+de confianza 1-α construido a partir de dos muestras de tamaño n1 y n2
+es: <br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'> <span
+class="math inline">\([(\bar{x_{1}}-\bar{x_{2}})-z_{\alpha/2}\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}},(\bar{x_{1}}-\bar{x_{2}})+z_{\alpha/2}\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}}]\)</span></b>
+</center>
+<p><br></p>
+</div>
+<div id="error-máximo-admisible-2" class="section level3">
+<h3><b style= 'color: Blue;'>Error máximo admisible</b></h3>
+<p>El <strong>error máximo admisible</strong> en la estimación de la
+diferencia de medias utilizando el intervalo de confianza para la
+diferencia de medias con un nivel de confianza 1 - α es su
+radio:<br></p>
+<center>
+<b style = 'color : black; font-size: 30px;'> <span
+class="math inline">\(E=z_{\alpha/2}\sqrt{\frac{\alpha_{1}^{2}}{n_{1}}+\frac{\alpha_{2}^{2}}{n_{2}}}\)</span></b>
+</center>
+<p><br></p>
+<center>
+<h1 style="color : Red;">
+FÓRMULAS DE MUESTREO.
+</h1>
+</center>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+name: "my-website"
+output_dir: "."
+navbar:
+  title: "UNSCH"
+  left:
+    - text: "Nosotros"
+      href: about.html
+    - text: "Estadística"
+      href: index.html
+  output:
+  html_document:
+    theme: united
+    highlight: tango
+    
+      

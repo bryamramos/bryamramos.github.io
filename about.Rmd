@@ -1,0 +1,14 @@
+---
+
+---
+<center> <h1>UNIVERSIDAD NACIONAL DE SAN CRISTÓBAL DE HUAMANGA</h1> </center>
+<center> <h2>FACULTAD DE INGENIERÍA DE MINAS, GEOLOGÍA Y CIVIL</h2> </center>
+<center> <h2>ESCUELA PROFESIONAL DE INGENIERÍA DE SISTEMAS</h2> </center>
+<center> <h3>Curso:Estadística II</h3> </center>
+<center> <h3>Tema:</h3> </center>
+<center> <h1 style = 'color : Red;'>INFERENCIA ESTADÍSTICA.</h1> </center>
+<center> <h3>Docente: Jackson Macoy Romero Plasencia</h3> </center>
+<center> <h3>Integrantes:</h3> </center>
+<center> <h3>Quispe Dolores, Nicanor Alejandrino</h3> </center>
+<center> <h3>Ramos Saez Bryam</h3> </center>
+<center> <h2>PERÚ - 2022</h2> </center>
